@@ -1,20 +1,49 @@
 body {
 	padding: 0;
 	margin: 0;
+	background-color: #C4C4C4;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 960px;
+	height: 960px;
+	padding-top: 30px;
+	box-sizing: border-box;
+	background-color: gray;
 }
 
 #container {
-	margin: 0;
-	margin: 30px;
+  position: relative;
+	
+
 }
+
+/*#outer_container {
+	width: 100%;
+	padding-top: 75%;
+	position: relative;
+}
+
+#container #inner_container #outer_container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}*/
 
 .gridBlock {
 	box-sizing: border-box;
 	border: 1px solid red;
-	height: 15px;
-	width: 15px;
 	background-color: blue;
-	float: right;
+	padding: 3%;
+	float: left;
+}
+
+.gridBlock:before, .gridBlock:after{
+	display: table;
+	clear: both;
 }
 
 #generate {
