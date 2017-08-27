@@ -1,0 +1,25 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	margin: 0;
+	margin: 30px;
+}
+
+.gridBlock {
+	box-sizing: border-box;
+	border: 1px solid red;
+	height: 15px;
+	width: 15px;
+	background-color: blue;
+	float: right;
+}
+
+#generate {
+	box-sizing: border-box;
+	margin: 15px;
+	position: absolute;
+	left: 0;
+}
