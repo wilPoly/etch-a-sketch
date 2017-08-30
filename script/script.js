@@ -7,15 +7,29 @@ function makeGrid(gridSize){
 	var containerWidth = $('#container').width();
 	var gridBlockSize =  containerWidth / gridSize;
 	$('.gridBlock').css({'width': gridBlockSize, 'height': gridBlockSize});
-	console.log(containerWidth);
-	console.log(gridBlockSize);
+	console.log('gridBlockSize : ' + gridBlockSize);
+	console.log('Nombre de blocs : ' + gridSize **2)
+}
+
+function resetGrid(){
+	var gridSize = window.prompt("How big do you want the grid?", 16);
+	
 }
 
 
 $(document).ready(function(){
 
-	$('#generate').on('click', function(){
-		makeGrid(16);
+	//Calls function makeGrid(gridSize)
+	makeGrid(16);
+
+	//Draw function
+	$('.gridBlock').hover(function(){
+			$(this).css({'background-color': 'blue'});
+	});
+
+	//Reset grid function
+	$('#generate').click('button', function(){
+		window.prompt("How big do you want the grid?", 16);
 	});
 	
 });
