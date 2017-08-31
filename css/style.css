@@ -15,9 +15,11 @@ body {
 
 .gridBlock {
 	box-sizing: border-box;
-	/*border: 1px solid blue;
-	background-color: red;*/
 	float: left;
+}
+
+.blue {
+	background-color: blue;
 }
 
 #generate {
