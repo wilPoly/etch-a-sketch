@@ -11,28 +11,30 @@ function makeGrid(gridSize){
 	console.log('Nombre de blocs : ' + gridSize **2)
 }
 
+function draw(){
+	$('.gridBlock').hover(function(){
+				$(this).addClass('blue');
+			});
+}
+ 
 
 $(document).ready(function(){
 
 	var gridSize = 16;
-
-	//Calls function makeGrid(gridSize)
 	makeGrid(gridSize);
-
-	//Draw function
-	$('.gridBlock').hover(function(){
-			$(this).addClass('blue');
-	});
-
+	draw();
+	
 	//Reset grid function
 	$('#generate').click('button', function(){
 		var gridSize = window.prompt("How big do you want the grid?", 16);
-		//doesn't work if no number specified
 		$('.gridBlock').remove();
-		makeGrid(gridSize);
-		$('.gridBlock').hover(function(){
-			$(this).addClass('blue');
-		});
+			if (gridSize === null) {
+				makeGrid(16);
+			}
+			else {
+				makeGrid(gridSize);
+			}
+		draw();
 	});
 	
 });

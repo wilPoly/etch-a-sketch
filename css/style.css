@@ -4,6 +4,12 @@ body {
 	background-color: #C4C4C4;
 }
 
+#wrapper{
+	width: 600px;
+	margin: 0 auto;
+
+}
+
 #container {
 	margin: 0 auto;
 	width: 600px;
@@ -24,7 +30,7 @@ body {
 
 #generate {
 	box-sizing: border-box;
-	margin: 15px;
+	margin: 0 auto;
 	position: absolute;
-	left: 0;
+	margin-top: 30px;
 }
