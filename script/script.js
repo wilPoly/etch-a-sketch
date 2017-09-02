@@ -11,30 +11,39 @@ function makeGrid(gridSize){
 	console.log('Nombre de blocs : ' + gridSize **2)
 }
 
+//Simple draw function
 function draw(){
 	$('.gridBlock').hover(function(){
-				$(this).addClass('blue');
-			});
+		$(this).addClass('blue');
+	});
+}
+
+//Draw function with random color
+function drawColor(){
+	$('.gridBlock').hover(function(){
+		var r = Math.floor(Math.random() * 255);
+		var g = Math.floor(Math.random() * 255);
+		var b = Math.floor(Math.random() * 255);
+		$(this).css({'background-color': 'rgb(' +r+ ',' +g+ ',' +b+ ')'});
+	});
 }
  
-
 $(document).ready(function(){
-
 	var gridSize = 16;
-	makeGrid(gridSize);
+	makeGrid(gridSize);	
 	draw();
 	
 	//Reset grid function
 	$('#generate').click('button', function(){
 		var gridSize = window.prompt("How big do you want the grid?", 16);
 		$('.gridBlock').remove();
-			if (gridSize === null) {
-				makeGrid(16);
-			}
-			else {
-				makeGrid(gridSize);
-			}
-		draw();
+		if (gridSize === null) {
+			makeGrid(16);
+		}
+		else {
+			makeGrid(gridSize);
+		}
+		drawColor();
 	});
 	
 });
