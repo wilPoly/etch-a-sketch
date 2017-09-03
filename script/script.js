@@ -43,7 +43,7 @@ function drawColor(){
 //Clear grid
 function clearGrid(){
 	$('#clear').click('button', function(){
-			$('.gridBlock').css('background-color', 'white');
+			$('.gridBlock').css('background-color', 'rgba(255,255,255,1)');
 	});
 }
 
